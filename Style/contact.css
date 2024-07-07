@@ -319,3 +319,163 @@ button:hover {
     padding: 10px;
   }
 }
+
+.footer {
+  padding-block: 3rem 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding-block: 8rem 3rem;
+  }
+}
+
+.footer__container {
+  row-gap: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    position: relative;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 1rem;
+}
+
+.footer__description,
+.footer__link,
+.footer__information {
+  font-size: var(--font-xm);
+}
+
+.footer__content,
+.footer__links {
+  display: grid;
+}
+
+.footer__content {
+  grid-template-columns: repeat(2, max-content);
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 340px) {
+  .footer__content {
+    gap: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .footer__content {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__content {
+    grid-template-columns: repeat(4, max-content);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__content {
+    column-gap: 4rem;
+  }
+}
+
+.footer__title {
+  font-size: var(--font-md);
+  margin-bottom: 1.5rem;
+}
+
+.footer__links {
+  row-gap: 0.5rem;
+}
+
+.footer__link {
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 1024px) {
+
+  .footer__title,
+  .footer__description,
+  .footer__link,
+  .footer__information {
+    font-size: var(--font-sm);
+  }
+}
+
+.footer__social {
+  display: flex;
+  column-gap: 1.25rem;
+}
+
+.footer__social-link {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+}
+
+.footer__social-link:hover {
+  color: var(--primary-color-alt);
+  transform: translateY(-2px);
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__social-link {
+    font-size: 1.5rem;
+  }
+}
+
+.footer__copy {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: var(--font-xm);
+  color: var(--text-color-light);
+}
+
+/*~~~~~~~~~~~~~~~ SCROLL UP ~~~~~~~~~~~~~~~*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--container-color);
+  box-shadow: 0 4px 12px hsla(19, 64%, 24%, 0.1);
+  display: inline-flex;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  color: var(--primary-color);
+  z-index: 1000;
+  transition:
+    bottom 0.3s,
+    transform 0.3s,
+    background 0.4s;
+}
+
+.scrollup:hover {
+  transform: translateY(-0.25rem);
+}
+
+@media screen and (min-width: 1024px) {
+  .scrollup {
+    right: 3rem;
+  }
+}
+
+/* Show Scroll Up */
+.show-scroll {
+  bottom: 3rem;
+}

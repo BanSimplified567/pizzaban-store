@@ -74,18 +74,7 @@
             </p>
 
             <a href="./menu.php" class="button">
-              Order
-              <svg width="46" height="46" fill="none" stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" stroke="none" d="M10.25 22.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z">
-                </path>
-                <path fill="currentColor" stroke="none" d="M18.75 22.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z">
-                </path>
-                <path d="m7 6 2.5 11h10L22 8.5"></path>
-                <path d="M12.5 13h8"></path>
-                <path d="M2.5 3 7 6"></path>
-                <path d="M22 8.5h-9.5"></path>
-              </svg> Now <i class="fa-solid fa-arrow-right"></i>
+              Order Now <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -155,7 +144,7 @@
                 fresh mozzarella, and basil.
               </p>
 
-              <p class="popular__price">₱110.19</p>
+              <p class="popular__price">₱149.45</p>
             </div>
           </div>
 
@@ -185,7 +174,7 @@
                 A traditional pizza topped with tomato sauce, mozzarella cheese.
               </p>
 
-              <p class="popular__price">₱118.00</p>
+              <p class="popular__price">₱149.45</p>
             </div>
           </div>
 
@@ -215,7 +204,7 @@
                 A hearty pizza topped with tomato sauce, mozzarella cheese, pepperoni.
               </p>
 
-              <p class="popular__price">₱117.99</p>
+              <p class="popular__price">₱149.45</p>
             </div>
           </div>
         </div>
@@ -305,18 +294,7 @@
 
             <ul class="footer__links">
               <li><a href="./contact.php" class="footer__link">Contact: 09551929404</a></li>
-              <li><a href="./contact.php" class="footer__link">Order
-                  <svg width="46" height="46" fill="none" stroke="currentColor" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="currentColor" stroke="none"
-                      d="M10.25 22.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z"></path>
-                    <path fill="currentColor" stroke="none"
-                      d="M18.75 22.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5Z"></path>
-                    <path d="m7 6 2.5 11h10L22 8.5"></path>
-                    <path d="M12.5 13h8"></path>
-                    <path d="M2.5 3 7 6"></path>
-                    <path d="M22 8.5h-9.5"></path>
-                  </svg> & Returns : 09460945946</a></li>
+              <li><a href="./contact.php" class="footer__link">Order & Returns : 09460945946</a></li>
               <li><a href="./final.php" class="footer__link">Home</a></li>
               <li><a href="./contact.php" class="footer__link">Reservation</a></li>
             </ul>

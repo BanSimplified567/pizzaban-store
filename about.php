@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/pizzas/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>About Us</title>
     <link rel="stylesheet" href="./Style/about.css">
@@ -46,7 +49,7 @@
 
 
     <div class="peopleStaff">
-      <h1>People At PizzaBan and Staff</h1>
+      <h1>People At PizzaBan</h1>
       <h2>Love at first bite.</h2>
     </div>
 
@@ -148,12 +151,13 @@
         <img class="staffMember" src="./img/TypesOfPeople/DongBenz.jpeg" alt="member-Staff">
         <img class="staffMember" src="./img/TypesOfPeople/DongLazaga.jpeg" alt="member-Staff">
         <div class="section-about">
-          <h1 class="about-Owner Chief">Chief of Staff </h1>
+          <h1 class="about-Owner Chief">People at Pizzaban</h1>
           <p>
-            In a pizza store company, the Chief of Staff is a key leader responsible for coordinating operations,
+            In a pizza store company, the People at Pizzaban is a key leader responsible for coordinating operations,
             facilitating communication, and supporting executive decision-making. They oversee day-to-day activities,
             collaborate with various departments, and assist in strategic planning. This role involves personnel
-            management, financial oversight, and ensuring a positive customer experience. The Chief of Staff serves as a
+            management, financial oversight, and ensuring a positive customer experience. The People at Pizzabanserves
+            as a
             crucial link between the CEO or owner and different aspects of the organization, contributing to the overall
             efficiency and success of the pizza store.
           </p>

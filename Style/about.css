@@ -336,11 +336,6 @@ body.dark-theme {
     font-size: var(--font-md);
   }
 
-  .johnny-Image {
-    width: 50rem;
-    height: 30rem;
-  }
-
   .about-paragraph {
     display: inline;
   }
@@ -405,7 +400,8 @@ body.dark-theme {
 }
 
 .johnny-Image {
-  object-fit: cover;
+  object-fit: contain;
+  border-radius: 10px;
   width: 300px;
   height: auto;
 }
@@ -426,6 +422,7 @@ body.dark-theme {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1024px) {
@@ -474,10 +471,11 @@ body.dark-theme {
 
 
 .staffMember {
-  object-fit: contain;
+  object-fit: cover;
+  aspect-ratio: 4/4;
   width: 20rem;
   height: auto;
-  aspect-ratio: 2/2;
+  border-radius: 10px;
 }
 
 .Chief {

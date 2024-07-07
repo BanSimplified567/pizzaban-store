@@ -75,6 +75,76 @@
     </div>
 
 
+    <!--~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~-->
+    <footer class="footer" id="contactUs">
+      <div class="footer__container container grid">
+        <div>
+          <a href="./menu.php" class="footer__logo">
+            <img src="./img/pizzas/logo.png" alt="logo image">
+            PizzaBan
+          </a>
+
+          <p class="footer__description">
+            Food for the body is not <br>
+            enough. There must be food <br>
+            for the soul.
+          </p>
+        </div>
+
+        <div class="footer__content">
+          <div>
+            <h3 class="footer__title">Main Menu</h3>
+
+            <ul class="footer__links">
+              <li><a href="./about.php" class="footer__link">About</a></li>
+              <li><a href="./menu.php" class="footer__link">Menu</a></li>
+              <li><a href="./menu.php" class="footer__link">Offer</a></li>
+              <li><a href="./contact.php" class="footer__link">Events</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Information</h3>
+
+            <ul class="footer__links">
+              <li><a href="./contact.php" class="footer__link">Contact: 09551929404</a></li>
+              <li><a href="./contact.php" class="footer__link">Order & Returns : 09460945946</a></li>
+              <li><a href="./final.php" class="footer__link">Home</a></li>
+              <li><a href="./contact.php" class="footer__link">Reservation</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Address</h3>
+
+            <ul class="footer__links">
+              <li class="footer__information">
+                Sibonga <br>
+                Plaza</li>
+              <li class="footer__information">09:00AM - 11:00PM</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Social Media</h3>
+
+            <ul class="footer__links footer__social">
+              <a href="https://web.facebook.com/him.blacklion567" class="footer__social-link" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/nocodearea/                                                  "
+                class="footer__social-link" target="_blank">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+              <a href="https://twitter.com/JBringcola" class="footer__social-link" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="./js/about.js"></script>
 
   </body>

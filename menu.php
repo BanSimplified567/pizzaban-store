@@ -4,21 +4,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon"
-      href="../Build-and-Deploy-a-Pizza-Website-Using-only-HTML-CSS-and-JavaScript-2023-Dark-and-Light//final//img/favicon.png">
+    <link rel="shortcut icon" href="./img/pizzas/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
       integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </style>
     <title>Pizza Ban</title>
     <link rel="stylesheet" href="./Style/style.css" />
+
     <script src="./js/jquery-3.7.1.min.js"></script>
     <style>
       .popup-form {
         display: none;
         position: fixed;
-        width: 20rem;
-        height: 20rem;
+        border-radius: 10px;
+        padding: 1rem;
+        width: 50vw;
+        height: auto;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -26,10 +27,6 @@
         padding: 20px;
         border: 1px solid var(--title-color);
         z-index: 1000;
-      }
-
-      .popup-form input {
-        padding: 1rem;
       }
 
       .overlay {
@@ -72,12 +69,11 @@
       </div>
     </header>
     <main class="header" id="header">
-      <nav class="container">
-        <a href="./final.php" class="nav__logo">
+      <nav class="nav container">
+        <a href="#header" class="nav__logo">
           <img src="./img/pizzas/favicon.png" alt="logo image">
           PizzaBan
         </a>
-
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item"><a href="./final.php" class="nav__link active-link">Home</a></li>
@@ -85,8 +81,21 @@
             <li class="nav__item"><a href="./about.php" class="nav__link">About us</a></li>
             <li class="nav__item"><a href="./contact.php" class="nav__link">Contact us</a></li>
           </ul>
+
+          <div class="nav__close" id="nav-close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+
+          <img src="./img/pizzas/pizza-slice.png" alt="nav image" class="nav__img-1">
         </div>
 
+        <div class="nav__buttons">
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
       </nav>
       <div class="pizza-area"></div>
 
@@ -189,9 +198,8 @@
             <span>Total</span>
             <span>₱ --</span>
           </div>
-          <button type="button" id="deliverButton" class="cart--finalizar">
-            Deliver
-          </button>
+          <div id="buttonContainer"></div>
+
         </div>
       </div>
     </aside>
@@ -199,17 +207,17 @@
       <div class="pizzaWindowBody">
         <div class="pizzaInfo--cancelMobileButton">Cancel</div>
         <div class="pizzaBig">
-          <img src="" />
+          <img src="" alt="pizzaban" />
         </div>
         <div class="pizzaInfo">
-          <h1>--</h1>
+          <h1 class="pizzaInfo-title">--</h1>
           <div class="pizzaInfo--desc">--</div>
           <div class="pizzaInfo--sizearea">
             <div class="pizzaInfo--sector">Size</div>
             <div class="pizzaInfo--sizes">
-              <div data-key="0" class="pizzaInfo--size">SMALL <span>--</span></div>
-              <div data-key="1" class="pizzaInfo--size">AVERAGE <span>--</span></div>
-              <div data-key="2" class="pizzaInfo--size selected">LARGE<span>--</span></div>
+              <div data-key="0" class="pizzaInfo--size selected">SMALL <span>--</span></div>
+              <div data-key="1" class="pizzaInfo--size">MEDIUM <span>--</span></div>
+              <div data-key="2" class="pizzaInfo--size">LARGE<span>--</span></div>
             </div>
           </div>
           <div class="pizzaInfo--pricearea">
@@ -230,24 +238,25 @@
     </div>
 
     <div class="overlay"></div>
-    <div class="popup-form">
-      <form id="myForm" class="myInformation">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+    <section class="popup-form">
+      <div class="popup-container">
+        <div class="popup-title">
+          <h3>Pizzaban Sibonga</h3>
+          <img src="./img/icons/ancestors.png" alt="pizzaban" class="popup-ancestors">
+        </div>
+        <form id="myForm" class="myInformation">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required />
+          <label for="number">Number:</label>
+          <input type="number" id="number" name="number" required />
+          <button type="button" id="submitForm">Submit</button>
+        </form>
+        <div class="popup-close">❌</div>
 
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location" required />
-
-        <label for="number">Number:</label>
-        <input type="number" id="number" name="number" required />
-
-        <button type="button" id="submitForm">Submit</button>
-      </form>
-    </div>
-
-
-
-    <script src="./js/pizzas.js"></script>
+      </div>
+    </section>
     <script>
       $(document).ready(function () {
         let cart = [];
@@ -321,6 +330,7 @@
           $(size).on('click', () => {
             $('.pizzaInfo--size.selected').removeClass('selected');
             $(size).addClass('selected');
+            updatePrice();
           });
         });
 
@@ -339,6 +349,7 @@
               id: pizzaJson[modalKey].id,
               size,
               qt: modalQt,
+              basePrice: pizzaJson[modalKey].price // Add base price to cart item
             });
           }
           updateCart();
@@ -355,6 +366,21 @@
           $('aside').css('left', '100vw');
         });
 
+        function updatePrice() {
+          const selectedSize = $('.pizzaInfo--size.selected').data('key');
+          const basePrice = pizzaJson[modalKey].price;
+          let finalPrice = basePrice;
+
+          if (selectedSize === 1) {
+            finalPrice += 10;
+          }
+          if (selectedSize === 2) {
+            finalPrice += 20;
+          }
+
+          $('.pizzaInfo--actualPrice').html(`₱ ${finalPrice.toFixed(2)}`);
+        }
+
         function updateCart() {
           $('.menu-openner').html(cart.length);
 
@@ -368,7 +394,16 @@
 
             cart.forEach((cartItem, i) => {
               let pizzaItem = pizzaJson.find((item) => item.id === cartItem.id);
-              subtotal += pizzaItem.price * cartItem.qt;
+
+              let itemPrice = cartItem.basePrice;
+              if (cartItem.size === 1) {
+                itemPrice += 10;
+              }
+              if (cartItem.size === 2) {
+                itemPrice += 20;
+              }
+
+              subtotal += itemPrice * cartItem.qt;
 
               let cartElement = $('.models .cart--item').clone();
 
@@ -417,8 +452,8 @@
             $('aside').removeClass('show').css('left', '100vw');
           }
         }
-
-        $('#deliverButton').click(function () {
+        // Show popup form when deliver button is clicked
+        $(document).on('click', '#deliverButton', function () {
           $('.overlay').fadeIn();
           $('.popup-form').fadeIn();
         });
@@ -437,27 +472,65 @@
           }
         });
 
+
+        // Close popup form when clicking outside of it
         $('.overlay').click(function () {
           $('.popup-form').fadeOut();
           $('.overlay').fadeOut();
         });
-      });
 
-      function displayValues() {
-        const name = $('#name').val();
-        const location = $('#location').val();
-        const number = $('#number').val();
+        // Close popup form when close button is clicked
+        $(document).on('click', '.popup-close', function () {
+          $('.popup-form').fadeOut();
+          $('.overlay').fadeOut();
+        });
 
-        const orderDetails = `
+        function displayValues() {
+          const name = $('#name').val();
+          const location = $('#location').val();
+          const number = $('#number').val();
+
+          const orderDetails = `
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Location:</strong> ${location}</p>
                 <p><strong>Number:</strong> ${number}</p>
             `;
 
-        $('#orderDetails').html(orderDetails);
-        $('.section-pizza-order').css('display', 'block');
-      }
+          $('#orderDetails').html(orderDetails);
+          $('.section-pizza-order').css('display', 'block');
+        }
+
+        // Append deliver button to the container
+        $('#buttonContainer').append('<button type="button" id="deliverButton" class="cart--finalizar">Deliver</button>');
+
+        // Apply CSS styles directly with jQuery (optional, since CSS is already applied)
+        $('#deliverButton').css({
+          'padding': '20px 30px',
+          'border-radius': '20px',
+          'background-color': '#48d05f',
+          'color': '#fff',
+          'cursor': 'pointer',
+          'text-align': 'center',
+          'margin-top': '20px',
+          'border': '2px solid #63f77c',
+          'transition': 'all ease 0.2s'
+        });
+
+        // Add hover effect with jQuery (optional, since CSS is already applied)
+        $('#deliverButton').hover(
+          function () {
+            $(this).css('background-color', '#35af4a');
+          },
+          function () {
+            $(this).css('background-color', '#48d05f');
+          }
+        );
+      });
     </script>
+
+
+    <script src="./js/pizzas.js"></script>
+    <script src="./js/about.js"></script>
   </body>
 
 </html>
