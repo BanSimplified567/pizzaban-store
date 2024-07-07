@@ -80,7 +80,7 @@
       <div class="footer__container container grid">
         <div>
           <a href="./menu.php" class="footer__logo">
-            <img src="./img/pizzas/logo.png" alt="logo image">
+            <img src="./img/pizzas/logo.png" alt="logo image" class="footer__pizzaban">
             PizzaBan
           </a>
 

@@ -18,7 +18,7 @@
         position: fixed;
         border-radius: 10px;
         padding: 1rem;
-        width: 50vw;
+        width: auto;
         height: auto;
         top: 50%;
         left: 50%;
@@ -68,7 +68,7 @@
         <span>0</span>🛒
       </div>
     </header>
-    <main class="header" id="header">
+    <main>
       <nav class="nav container">
         <a href="#header" class="nav__logo">
           <img src="./img/pizzas/favicon.png" alt="logo image">
@@ -286,7 +286,7 @@
             $('.pizzaInfo--size.selected').removeClass('selected');
 
             $('.pizzaInfo--size').each((sizeIndex, size) => {
-              if (sizeIndex === 2) {
+              if (sizeIndex === 0) {
                 $(size).addClass('selected');
               }
               $(size).find('span').html(pizzaJson[key].sizes[sizeIndex]);
@@ -507,22 +507,22 @@
         $('#deliverButton').css({
           'padding': '20px 30px',
           'border-radius': '20px',
-          'background-color': '#48d05f',
+          'background-color': '#b30003',
           'color': '#fff',
           'cursor': 'pointer',
           'text-align': 'center',
           'margin-top': '20px',
-          'border': '2px solid #63f77c',
+          'border': '2px solid #800002',
           'transition': 'all ease 0.2s'
         });
 
         // Add hover effect with jQuery (optional, since CSS is already applied)
         $('#deliverButton').hover(
           function () {
-            $(this).css('background-color', '#35af4a');
+            $(this).css('background-color', '#b30003');
           },
           function () {
-            $(this).css('background-color', '#48d05f');
+            $(this).css('background-color', '#800002');
           }
         );
       });

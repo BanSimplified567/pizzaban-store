@@ -195,21 +195,16 @@
                   <path d="M2.5 3 7 6"></path>
                   <path d="M22 8.5h-9.5"></path>
                 </svg>
-
               </a>
-
               <h3 class="popular__name">Meat Lovers</h3>
-
               <p class="popular__description">
                 A hearty pizza topped with tomato sauce, mozzarella cheese, pepperoni.
               </p>
-
               <p class="popular__price">₱149.45</p>
             </div>
           </div>
         </div>
       </section>
-
       <section class="recently section" id="recently">
         <div class="recently__container container grid">
           <div class="recently__data">

@@ -104,6 +104,9 @@
                 READINGBOOKS - DRAWING - WRESTLING - Writing </span>
             </div>
           </div>
+          <div>
+
+          </div>
           <img src="./img/TypesOfPeople/DongBenz.jpeg" alt="John-Sins" class="johnny-Image">
           <div class="section-about">
             <h1 class="about-Owner"> Why Earl Venz Ivan Diez
@@ -170,7 +173,6 @@
       <div class="footer__container container grid">
         <div>
           <a href="./menu.php" class="footer__logo">
-            <img src="./img/pizzas/logo.png" alt="logo image">
             PizzaBan
           </a>
 
@@ -222,8 +224,7 @@
               <a href="https://web.facebook.com/him.blacklion567" class="footer__social-link" target="_blank">
                 <i class="fa-brands fa-facebook"></i>
               </a>
-              <a href="https://www.instagram.com/nocodearea/                                                  "
-                class="footer__social-link" target="_blank">
+              <a href="https://www.instagram.com/nocodearea/" class="footer__social-link" target="_blank">
                 <i class="fa-brands fa-square-instagram"></i>
               </a>
               <a href="https://twitter.com/JBringcola" class="footer__social-link" target="_blank">

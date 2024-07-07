@@ -71,11 +71,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .nav__buttons {
   display: flex;
   align-items: center;
@@ -344,6 +339,10 @@ button:hover {
 
 .footer__logo {
   margin-bottom: 1rem;
+}
+
+img {
+  width: 20px;
 }
 
 .footer__description,
